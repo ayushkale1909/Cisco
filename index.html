@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Labs Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for labs...">
+    <button id="searchButton">Search</button>
+</div>
+
+<div class="row centered-block">
+    	<div class="lab-block">
+        <h2 class="lab-name" data-tags ="cisco juniper">Networking Labs</h2>
+        <p class="lab-description">Welcome to the Networking Labs page. <br><br><br> This webpage includes documentation of various labs, protocols, and Networking concepts. The labs are conducted using a variety of tools and resources.</p> <p>Cisco Packet Tracer is used to create network topologies, configure devices, and see the impact of your changes in real-time. GNS3 is used to utilize real router images in a virtual environment using virtual machines. Traffic Generators, <a href="https://www.ostinato.org/">Ostinato</a> and <a href="https://iperf.fr/">iPerf</a> are used simulate network traffic and test the performance of various network configurations.</p> 
+	</div>       
+</div>
+
+<div class="tags-container">
+    <div class="tag" data-filter="cisco">Cisco</div>
+    <div class="tag" data-filter="sdn">SDN</div>
+    <div class="tag" data-filter="network-security">Network Security</div>
+    <div class="tag" data-filter="ipv6">IPv6</div>
+    <div class="tag" data-filter="ipv4">IPv4</div>
+    <div class="tag" data-filter="ip-addressing">IP Addressing</div>
+    <div class="tag" data-filter="arp">ARP</div>
+    <div class="tag" data-filter="ppp">PPP</div>
+    <div class="tag" data-filter="serial">Serial</div>
+    <div class="tag" data-filter="hdlc">HDLC</div>
+    <div class="tag" data-filter="security">Security</div>
+    <div class="tag" data-filter="all">All</div>
+</div>
+
+<div class="row">
+    <div class="lab-block" data-tags="cisco ipv6">
+        <h2 class="lab-name">IPv6 Address Autoconfiguration</h2>
+        <p class="lab-description">Configuring IPv6 Address Autoconfiguration on routers, specifically Stateless Address Autoconfiguration (SLAAC) and EUI-64 based addressing.</p>
+	<p> Key Concepts : SLAAC (Stateless Address Autoconfiguration), EUI-64 Based Addressing </p>
+        <a href="document/IPv6 Address Autoconfiguration/IPv6AddressAutoconfiguration.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+	<div class="lab-block" data-tags="cisco ipv6">
+        <h2 class="lab-name">Configure, Verify, and Troubleshoot IPv6 Addresses</h2>
+        <p class="lab-description">Set up, Verify, and Troubleshoot IPv6 addresses on Cisco routers.Adding Serial Ports to the Routers, Configuring IPv6 and Loopback Addresses, Setting the Clock Rate on DCE Interface and Testing Connectivity</p>
+	<p>Key Concepts : IPv6, Cisco 1841 Routers, DCE (Data Communications Equipment), Ping </p>
+        <a href="document/Configure, Verify, and Troubleshoot IPv6 Addresses/ConfigureVerifyandTroubleshootIPv6Addresses.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+</div>
+
+<div class="row">
+	<div class="lab-block" data-tags="cisco ipv4">
+        <h2 class="lab-name">Configure, Verify, and Troubleshoot IPv4 Addresses</h2>
+        <p class="lab-description">Hostname Configuration, Configuring IPv4 addresses on Cisco routers and Verification.</p>
+	<p>Key Concepts : IPv4, Cisco Routers, Hostname, Subnet Mask </p>
+        <a href="document/Configure, Verify, and Troubleshoot IPv4 Addresses/ConfigureVerifyandTroubleshootIPv4Addresses.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+<div class="lab-block" data-tags="cisco arp">
+        <h2 class="lab-name">ARP and Proxy ARP</h2>
+        <p class="lab-description">Understanding ARP (Address Resolution Protocol) and Proxy ARP, Hostname Configuration,  IP Address and Static Route Configuration, ARP Cache Checking</p>
+       	<p>Key Concepts : Address Resolution Protocol (ARP), Proxy ARP, Static Routes, Router Configuration, ARP Cache, Timeouts in ARP Cache, ARP Table Entries </p>
+	<a href="document/ARP and Proxy ARP/ARPandProxyARP.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+</div>
+
+<div class="row">
+	<div class="lab-block" data-tags="cisco ppp">
+        <h2 class="lab-name">Configuring PPP Encapsulation</h2>
+        <p class="lab-description">PPP (Point-to-Point Protocol) encapsulation was configured on Cisco router Serial interfaces. Debugging PPP link negotiation to observe the different phases of PPP negotiation.</p>
+	<p> Key Concepts: PPP Encapsulation, PPP Link Negotiation, Debugging PPP Negotiation, Ping Testing, Debugging Best Practices </p>
+        <a href="document/Configuring PPP Encapsulation/Lab 7.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+<div class="lab-block" data-tags="cisco serial">
+        <h2 class="lab-name">Configuring Back-to Back Serial Connections</h2>
+        <p class="lab-description">Configuring back-to-back Serial interfaces between Cisco routers. Enabling Serial interfaces, Identifying the DCE (Data Circuit-terminating Equipment) interface, Configuring clocking, Setting IP addresses, and verifying connectivity through pinging.</p>
+       	<p>Key Concepts : Back-to-Back Serial Connections, DCE and DTE, Clocking Configuration, IP Addressing, Interface Verification, Connectivity Testing </p>
+        <a href="document/Configuring Back-to Back Serial Connections/Lab 5.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+
+
+</div>
+<div class="row">
+	<div class="lab-block" data-tags="cisco hdlc">
+        <h2 class="lab-name">Verifying Cisco HDLC Encapsulation</h2>
+        <p class="lab-description">Enabling Serial interfaces, configuring clocking, setting IP addresses, and verifying HDLC encapsulation. Debugging was utilized to confirm the transmission of HDLC keepalive messages between the routers</p>
+       	<p>Key Concepts : Cisco HDLC Encapsulation, DCE and DTE, Serial Interface Configuration, HDLC Keepalive Messages, Interface Verification, Debugging Commands</p>
+        <a href="document/Verifying Cisco HDLC Encapsulation/Lab 6.html" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+
+	<div class="lab-block" data-tags="nmap security">
+        	<h2 class="lab-name">Network Scanning and Security with Nmap</h2>
+        	<p class="lab-description">
+		The Nmap scan of scanme.nmap.org identified open ports including SSH (port 22) running an older OpenSSH version, an Nping Echo service on port 9929, and a hidden service on 		port 31337 behind TCP wrappers. Port 80 (HTTP) was filtered, and the system, operating on Linux kernel 5.X, showed an uptime of around 10.606 days.</p>
+		<p> Key Concepts: Nmap Scan, Open Ports, Nping Echo, TCP Wrapped Service, Security Best Practices</p>
+        	<a href="document/nmap/NetworkScanningandSecuritywithNmap.html" class="btn html-btn">View Documentation</a>
+        	<a href="https://github.com/your-username/repo-name/path-to-packet-tracer-file" class="btn github-btn">Download Packet Tracer File</a>
+    	</div>
+	</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var tags = document.querySelectorAll('.tag');
+    var labBlocks = document.querySelectorAll('.lab-block');
+
+    tags.forEach(function(tag) {
+        tag.addEventListener('click', function() {
+            var filter = tag.getAttribute('data-filter');
+            var showAll = filter === 'all';
+
+            labBlocks.forEach(function(block) {
+                var tagsArray = block.getAttribute('data-tags').split(' ');
+                var hasMatchingTag = tagsArray.includes(filter) || showAll;
+
+                if (hasMatchingTag) {
+                    block.style.display = 'block';
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+</body>
+</html>

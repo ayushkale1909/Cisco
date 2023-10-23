@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+     background: url('NvL.gif') no-repeat center center fixed; 
+    background-size: cover;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+}
+
+.lab-block {
+    background: url('back.jpg') no-repeat center center; 
+    background-size: cover; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0; 
+     flex: 0 1 calc(50% - 15px); 
+    margin-right: 20px;
+    color: white	; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.lab-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lab-description {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.html-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.html-btn:hover {
+    background-color: #388E3C;
+}
+
+.github-btn:hover {
+    background-color: #222;
+}
+.row .lab-block:nth-child(2) {
+    margin-right: 0;
+}
+
+.row:nth-child(1) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Background for .lab-block in the second row */
+.row:nth-child(2) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Background for .lab-block in the third row */
+.row:nth-child(3) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.centered-block {
+    justify-content: center;
+   
+}
+.centered-block .lab-block {
+    flex-basis: calc(60% - 15px); /* adjust the percentage based on your design preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;      /* Horizontally center the content */
+    text-align: center;
+}
+.centered-block .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+    /* any other styles */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
+    padding: 20px;
+    margin-bottom: 20px;     /* spacing between the search bar and the content below it */
+}
+
+#searchInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;                 /* Allow the input to take up available space */
+    margin-right: 10px;      /* spacing between the input and the search button */
+}
+
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #388E3C;
+}
+
+.tags-container {
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+    margin-right: 15px; /* Increase horizontal spacing */
+    margin-bottom: 15px; /* Increase vertical spacing */
+    padding: 10px 15px; /* Adjust padding for more space inside the tags */
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px; /* Increase border-radius for rounded corners */
+}
+
+.tag:hover {
+    background-color: #2980b9;
+}
+
