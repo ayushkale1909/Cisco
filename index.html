@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Blocks Filter</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+     background: url('NvL.gif') no-repeat center center fixed; 
+    background-size: cover;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+}
+
+.lab-block {
+    background: url('back.jpg') no-repeat center center; 
+    background-size: cover; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0; 
+     flex: 0 1 calc(50% - 15px); 
+    margin-right: 20px;
+    color: white	; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.lab-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lab-description {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.html-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.html-btn:hover {
+    background-color: #388E3C;
+}
+
+.github-btn:hover {
+    background-color: #222;
+}
+.row .lab-block:nth-child(2) {
+    margin-right: 0;
+}
+
+.row:nth-child(1) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Background for .lab-block in the second row */
+.row:nth-child(2) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Background for .lab-block in the third row */
+.row:nth-child(3) .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.centered-block {
+    justify-content: center;
+   
+}
+.centered-block .lab-block {
+    flex-basis: calc(60% - 15px); /* adjust the percentage based on your design preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;      /* Horizontally center the content */
+    text-align: center;
+}
+.centered-block .lab-block {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+    /* any other styles */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
+    padding: 20px;
+    margin-bottom: 20px;     /* spacing between the search bar and the content below it */
+}
+
+#searchInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;                 /* Allow the input to take up available space */
+    margin-right: 10px;      /* spacing between the input and the search button */
+}
+
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #388E3C;
+}
+
+.tags-container {
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+    margin-right: 15px; /* Increase horizontal spacing */
+    margin-bottom: 15px; /* Increase vertical spacing */
+    padding: 10px 15px; /* Adjust padding for more space inside the tags */
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px; /* Increase border-radius for rounded corners */
+}
+
+.tag:hover {
+    background-color: #2980b9;
+}
+
+
+    </style>
+</head>
+
+<body>
+<p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold; text-align: center;">Welcome to the Networking Labs Portfolio.</p><br><p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold;">The following are the tags of topics / concepts and you can use them to filter the labs accordingly.</p>
+
+<div class="tags-container">
+    <div class="tag" data-filter="cisco">Cisco</div>
+    <div class="tag" data-filter="sdn">SDN</div>
+    <div class="tag" data-filter="network-security">Network Security</div>
+    <div class="tag" data-filter="ipv6">IPv6</div>
+    <div class="tag" data-filter="ipv4">IPv4</div>
+    <div class="tag" data-filter="arp">ARP</div>
+    <div class="tag" data-filter="ppp">PPP</div>
+    <div class="tag" data-filter="serial">Serial</div>
+    <div class="tag" data-filter="hdlc">HDLC</div>
+    <div class="tag" data-filter="tcp">TCP</div>	
+    <div class="tag" data-filter="udp">UDP</div>	
+    <div class="tag" data-filter="ns3">ns3</div>	
+    <div class="tag" data-filter="ssh">ssh</div>	
+    <div class="tag" data-filter="radius">radius</div>	
+    <div class="tag" data-filter="all">All</div>
+</div>
+
+<div class="row">
+    <div class="lab-block" data-tags="cisco ipv6">
+        <h2 class="lab-name">IPv6 Address Autoconfiguration</h2>
+        <p class="lab-description">Configuring IPv6 Address Autoconfiguration on routers, specifically Stateless Address Autoconfiguration (SLAAC) and EUI-64 based addressing.</p>
+	<p> Key Concepts : SLAAC (Stateless Address Autoconfiguration), EUI-64 Based Addressing </p>
+        <a href="https://drive.google.com/file/d/1-GVGYyHuczqrOhIVtOOXDNxZJ9WQWpFU/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/IPv6%20Address%20Autoconfiguration.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+    <div class="lab-block" data-tags="cisco ipv6">
+    <h2 class="lab-name">Configure, Verify, and Troubleshoot IPv6 Addresses</h2>
+    <p class="lab-description">Set up, Verify, and Troubleshoot IPv6 addresses on Cisco routers.Adding Serial Ports to the Routers, Configuring IPv6 and Loopback Addresses, Setting the 	Clock Rate on DCE Interface and Testing Connectivity</p>
+	<p>Key Concepts : IPv6, Cisco 1841 Routers, DCE (Data Communications Equipment), Ping </p>
+        <a href="https://drive.google.com/file/d/1ceb-QB5XZOK8l2qvnxNhLxupMgBoe4fc/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Configure%2C%20Verify%2C%20and%20Troubleshoot%20IPv6%20Addresses.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    </div>
+</div>
+
+<div class="row">
+	<div class="lab-block" data-tags="cisco ipv4">
+        <h2 class="lab-name">Configure, Verify, and Troubleshoot IPv4 Addresses</h2>
+        <p class="lab-description">Hostname Configuration, Configuring IPv4 addresses on Cisco routers and Verification.</p>
+	<p>Key Concepts : IPv4, Cisco Routers, Hostname, Subnet Mask </p>
+        <a href="https://drive.google.com/file/d/17VH2TUYL4YuPWKvbtr55T_SOi3jQfPRt/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Configure%2C%20Verify%2C%20and%20Troubleshoot%20IPv4%20Addresses.pkt" class="btn github-btn">Download Packet Tracer File</a>
+        </div>
+	<div class="lab-block" data-tags="cisco arp">
+        <h2 class="lab-name">ARP and Proxy ARP</h2>
+        <p class="lab-description">Understanding ARP (Address Resolution Protocol) and Proxy ARP, Hostname Configuration,  IP Address and Static Route Configuration, ARP Cache Checking</p>
+       	<p>Key Concepts : Address Resolution Protocol (ARP), Proxy ARP, Static Routes, Router Configuration, ARP Cache, Timeouts in ARP Cache, ARP Table Entries </p>
+	<a href="https://drive.google.com/file/d/14IpM8eRvNquXU7AhxHM54ehh2YN-CiOL/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/ARP%20and%20Proxy%20ARP.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    	</div>
+</div>
+
+<div class="row">
+	<div class="lab-block" data-tags="cisco ppp">
+        <h2 class="lab-name">Configuring PPP Encapsulation</h2>
+        <p class="lab-description">PPP (Point-to-Point Protocol) encapsulation was configured on Cisco router Serial interfaces. Debugging PPP link negotiation to observe the different  	phases of PPP negotiation.</p>
+	<p> Key Concepts: PPP Encapsulation, PPP Link Negotiation, Debugging PPP Negotiation, Ping Testing, Debugging Best Practices </p>
+        <a href="https://drive.google.com/file/d/1huFpuMVo2GUrIPFJnhtBc6ET7rDxqdPO/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Configuring%20PPP%20Encapsulation.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    	</div>
+	<div class="lab-block" data-tags="cisco serial">
+        <h2 class="lab-name">Configuring Back-to Back Serial Connections</h2>
+        <p class="lab-description">Configuring back-to-back Serial interfaces between Cisco routers. Enabling Serial interfaces, Identifying the DCE (Data Circuit-terminating Equipment) 	interface, Configuring clocking, Setting IP addresses, and verifying connectivity through pinging.</p>
+       	<p>Key Concepts : Back-to-Back Serial Connections, DCE and DTE, Clocking Configuration, IP Addressing, Interface Verification, Connectivity Testing </p>
+        <a href="https://drive.google.com/file/d/1rDr5DAOatkz0TGrLP5-iu75k-0ghU2nr/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Configuring%20Back-to%20Back%20Serial%20Connections.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    	</div>
+</div>
+<div class="row">
+	<div class="lab-block" data-tags="cisco hdlc">
+        <h2 class="lab-name">Verifying Cisco HDLC Encapsulation</h2>
+        <p class="lab-description">Enabling Serial interfaces, configuring clocking, setting IP addresses, and verifying HDLC encapsulation. Debugging was utilized to confirm the 	transmission of HDLC keepalive messages between the routers</p>
+       	<p>Key Concepts : Cisco HDLC Encapsulation, DCE and DTE, Serial Interface Configuration, HDLC Keepalive Messages, Interface Verification, Debugging Commands</p>
+        <a href="https://drive.google.com/file/d/1AAA8MVJZ5Tl3BQRcqJZ6hI4GjTebYVAd/view?usp=sharing" class="btn html-btn">View Documentation</a>
+        <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Verifying%20Cisco%20HDLC%20Encapsulation.pkt" class="btn github-btn">Download Packet Tracer File</a>
+    	</div>
+	<div class="lab-block" data-tags="nmap network-security">
+        <h2 class="lab-name">Network Scanning and Security with Nmap</h2>
+        <p class="lab-description">
+	The Nmap scan of scanme.nmap.org identified open ports including SSH (port 22) running an older OpenSSH version, an Nping Echo service on port 9929, and a hidden service on 		port 31337 behind TCP wrappers. Port 80 (HTTP) was filtered, and the system, operating on Linux kernel 5.X, showed an uptime of around 10.606 days.</p>
+	<p> Key Concepts: Nmap Scan, Open Ports, Nping Echo, TCP Wrapped Service, Security Best Practices</p>
+        <a href="https://drive.google.com/file/d/1AWZmkhQm8e4LF4bB6REHCqbxbVo6DTmv/view?usp=sharing" class="btn html-btn">View Documentation</a>
+       	</div>
+</div>
+<div class="row">
+	<div class="lab-block" data-tags="arp">
+    	<h2 class="lab-name">Analyzing ARP Packet Structure</h2>
+    	<p class="lab-description">Utilized Linux networking tools, including tcpdump, to gather detailed information about ARP packet structures. Additionally, examined ARP cache and 	different types of messages used.</p>
+    	<p>Key Concepts: ARP Packet Structure, tcpdump Analysis, Wireshark Examination, Linux Networking Tools</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/Experiment%20with%20ARP.pdf" class="btn html-btn">View Documentation</a>
+	</div>
+	<div class="lab-block" data-tags="tcp udp">
+    	<h2 class="lab-name">Analyzing TCP and UDP Protocols</h2>
+    	<p class="lab-description">Utilized Linux networking tools, for detailed information about TCP and UDP messages. Additionally, examined MTU, header, payload under various different 	conditions.</p>
+    	<p>Key Concepts: TCP, UDP, tcpdump, Wireshark, Linux Networking Tools</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/Experiment%20with%20UDPTCP.pdf" class="btn html-btn">View Documentation</a>
+	</div>
+</div>	
+
+<div class="row">
+	<div class="lab-block" data-tags="ipv4 ipv6">
+    	<h2 class="lab-name"> IP addressing and subnet masking</h2>
+    	<p class="lab-description">Utilized virtual logical interfaces in Linux to configure IP addressing and Subnet Masking for a Local Area Network and established connection between 	different hosts.</p>
+    	<p>Key Concepts: IP addressing, Routing Table, Linux Networking Tools</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/IP%20addressing%20and%20subnet%20masking.pdf" class="btn html-btn">View Documentation</a>
+	</div>
+	<div class="lab-block" data-tags="ipv4 routing">
+    	<h2 class="lab-name"> IP Routing </h2>
+    	<p class="lab-description">Utilized traceroute, tracepath, netstat, ICMP redirect messages and wireshark for IP routing between different hosts.</p>
+    	<p>Key Concepts: IP addressing, Routing Table, ICMP, netstat, Linux Networking Tools</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/IP%20Routing.pdf" class="btn html-btn">View Documentation</a>
+	</div>	
+</div>
+
+<div class="row">	
+	<div class="lab-block" data-tags="tcp ssh">
+    	<h2 class="lab-name"> TCP Experiments</h2>
+    	<p class="lab-description">Utilized ssh and tcp to connect 2 hosts and recreated the timeline diagram that shows the data exchange in accordance with the tcp dump, incorporating 	elements like Intial Sequence Number, Acknowldgements, Timeout, Retransmission, Slow start. Utlized tcp sockets</p>
+    	<p>Key Concepts: TCP, TCP Sockets, netstat, TCP Interactive Data Flow, TCP Bulk Data Flow</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/TCP.pdf" class="btn html-btn">View Documentation</a>
+	</div>
+	<div class="lab-block" data-tags="tcp ssh">
+    	<h2 class="lab-name"> Troubleshooting with ICMP</h2>
+    	<p class="lab-description">Utlized ping and traceroute to troubleshoot different types of host and verify the connectivity. tcpdump with additional flags is used to identify the 	problems. </p>
+	<p>Key Concepts: Ping, traceroute, tcpdump, pcap</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/Troubleshooting%20Experiments%20with%20ICMP.pdf" class="btn html-btn">View Documentation</a>
+	</div>	
+</div>
+
+<div class="row">	
+	<div class="lab-block" data-tags="udp ns3">
+    	<h2 class="lab-name"> Network modeling and simulation using ns-3 </h2>
+    	<p class="lab-description">Ns-3 simulation for a UDP Point to point communcation and visualisation using NetAnim</p>
+    	<p>Key Concepts: ns3, NetAnim, udp</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/Introduction%20to%20network%20modeling%20and%20simulation%20using%20ns-3.pdf" class="btn html-btn">View 	Documentation</a>
+	</div>
+	<div class="lab-block" data-tags="tcp ns3">
+    	<h2 class="lab-name"> ns-3 Experiment</h2>
+    	<p class="lab-description">Built a Bus Network Topology using ns-3. Intrdunced  transmission delay, associated CSMA Devices. Changed the value of the nodes and utilized tcpdump for 	verification</p>
+	<p>Key Concepts: ns3, tcpdump, CSMA, tcp</p>
+    	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/ns-3%20experiment.pdf" class="btn html-btn">View Documentation</a>
+	</div>	
+</div>
+
+<div class="row">	
+	<div class="lab-block" data-tags="radius cisco">
+    	<h2 class="lab-name"> Configure RADIUS </h2>
+    	<p class="lab-description">Configuring RADIUS using AAA authentication on the Server Side. Router configuration for aaa and veryfing working using remote telnet access into server and router.</p>
+    	<p>Key Concepts: RADIUS, AAA, Server Configuration</p>
+    	<a href="https://drive.google.com/file/d/1qL48HMuvaJbHSLFaUOfqOP7mESeYR479/view?usp=sharing" class="btn html-btn">View 	Documentation</a>
+	<a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/RADIUS.pkt" class="btn github-btn">Download Packet 	Tracer File</a>
+
+	</div>
+	
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tags = document.querySelectorAll('.tag');
+            var labBlocks = document.querySelectorAll('.lab-block');
+
+            tags.forEach(function(tag) {
+                tag.addEventListener('click', function() {
+                    var filter = tag.getAttribute('data-filter');
+                    var showAll = filter === 'all';
+
+                    labBlocks.forEach(function(block) {
+                        var tagsArray = block.getAttribute('data-tags').split(' ');
+                        var hasMatchingTag = tagsArray.includes(filter) || showAll;
+
+                        if (hasMatchingTag) {
+                            block.style.display = 'block';
+                        } else {
+                            block.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
