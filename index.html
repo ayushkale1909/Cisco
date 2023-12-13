@@ -8,7 +8,7 @@
     <style>
        body {
     font-family: 'Arial', sans-serif;
-     background: url('NvL.gif') no-repeat center center fixed; 
+    background: url('NvL.gif') no-repeat center center fixed; 
     background-size: cover;
     padding: 20px;
 }
@@ -25,12 +25,11 @@
     padding: 20px;
     border-radius: 10px;
     margin: 0; 
-     flex: 0 1 calc(50% - 15px); 
+    flex: 0 1 calc(50% - 15px); 
     margin-right: 20px;
-    color: white	; 
+    color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
-
 
 .lab-name {
     font-size: 28px;
@@ -69,6 +68,7 @@
 .github-btn:hover {
     background-color: #222;
 }
+
 .row .lab-block:nth-child(2) {
     margin-right: 0;
 }
@@ -78,13 +78,11 @@
     background-size: cover;
 }
 
-/* Background for .lab-block in the second row */
 .row:nth-child(2) .lab-block {
     background: url('back.jpg') no-repeat center center;
     background-size: cover;
 }
 
-/* Background for .lab-block in the third row */
 .row:nth-child(3) .lab-block {
     background: url('back.jpg') no-repeat center center;
     background-size: cover;
@@ -92,28 +90,28 @@
 
 .centered-block {
     justify-content: center;
-   
 }
+
 .centered-block .lab-block {
-    flex-basis: calc(60% - 15px); /* adjust the percentage based on your design preference */
+    flex-basis: calc(60% - 15px);
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Vertically center the content */
-    align-items: center;      /* Horizontally center the content */
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
+
 .centered-block .lab-block {
     background: url('back.jpg') no-repeat center center;
     background-size: cover;
-    /* any other styles */
 }
 
 .search-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center;     /* Vertically center the content */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    margin-bottom: 20px;     /* spacing between the search bar and the content below it */
+    margin-bottom: 20px;
 }
 
 #searchInput {
@@ -121,8 +119,8 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex: 1;                 /* Allow the input to take up available space */
-    margin-right: 10px;      /* spacing between the input and the search button */
+    flex: 1;
+    margin-right: 10px;
 }
 
 #searchButton {
@@ -144,45 +142,84 @@
     margin-top: 20px;
 }
 
-.tag {
+.tag.protocol {
     display: inline-block;
-    margin-right: 15px; /* Increase horizontal spacing */
-    margin-bottom: 15px; /* Increase vertical spacing */
-    padding: 10px 15px; /* Adjust padding for more space inside the tags */
-    background-color: #3498db;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #3498db; /* Blue color for protocol tags */
     color: #fff;
     cursor: pointer;
-    border-radius: 8px; /* Increase border-radius for rounded corners */
+    border-radius: 8px;
 }
 
-.tag:hover {
-    background-color: #2980b9;
+.tag.protocol:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
+.tag.network-vendor {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #FF0000; /* Red color for network vendor tags */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.tag.network-vendor:hover {
+    background-color: #B30000;
+}
+
+.tag.tech {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #008000; 
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.tag.tech:hover {
+    background-color: #222222; 
+}
+ 	
 
     </style>
 </head>
 
 <body>
-<p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold; text-align: center;">Welcome to the Networking Labs Portfolio.</p><br><p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold;">The following are the tags of topics / concepts and you can use them to filter the labs accordingly.</p>
+<p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold; text-align: center;">Greetings ! My name is Ayush Kale. Welcome to the Networking Labs Portfolio.</p><br><p style="font-family: 'Times New Roman', serif; font-size: 18px; color: white; font-weight: bold;">The following are the tags of topics / concepts and you can use them to filter the labs and documentation accordingly. I am constantly updating this portfolio.</p>
 
 <div class="tags-container">
-    <div class="tag" data-filter="cisco">Cisco</div>
-    <div class="tag" data-filter="sdn">SDN</div>
-    <div class="tag" data-filter="network-security">Network Security</div>
-    <div class="tag" data-filter="ipv6">IPv6</div>
-    <div class="tag" data-filter="ipv4">IPv4</div>
-    <div class="tag" data-filter="arp">ARP</div>
-    <div class="tag" data-filter="ppp">PPP</div>
-    <div class="tag" data-filter="serial">Serial</div>
-    <div class="tag" data-filter="hdlc">HDLC</div>
-    <div class="tag" data-filter="tcp">TCP</div>	
-    <div class="tag" data-filter="udp">UDP</div>	
-    <div class="tag" data-filter="ns3">ns3</div>	
-    <div class="tag" data-filter="ssh">ssh</div>	
-    <div class="tag" data-filter="radius">radius</div>	
-    <div class="tag" data-filter="all">All</div>
+    <br><h1 style="color: white; font-size: 18px;"> Network Vendors :</h1><br><br>
+    <div class="tag network-vendor" data-filter="cisco">Cisco</div>
+    <div class="tag network-vendor" data-filter="juniper">Juniper</div>
+    <div class="tag network-vendor" data-filter="palo-alto">Palo Alto</div>
+    <div class="tag network-vendor" data-filter="arista">Arista</div>
+    <br><h1 style="color: white; font-size: 18px;">Network Technologies:</h1><br><br>
+    <div class="tag tech" data-filter="sdn">SDN</div>
+    <div class="tag tech" data-filter="ns3">ns3</div>
+    <div class="tag tech" data-filter="topo">Network Topologies</div>
+    <br><h1 style="color: white; font-size: 18px;">Networking Protocols:</h1><br><br>
+    <div class="tag protocol" data-filter="ipv6">IPv6</div>
+    <div class="tag protocol" data-filter="ipv4">IPv4</div>
+    <div class="tag protocol" data-filter="arp">ARP</div>
+    <div class="tag protocol" data-filter="ppp">PPP</div>
+    <div class="tag protocol" data-filter="serial">Serial</div>
+    <div class="tag protocol" data-filter="hdlc">HDLC</div>
+    <div class="tag protocol" data-filter="tcp">TCP</div>	
+    <div class="tag protocol" data-filter="udp">UDP</div>	
+    <div class="tag protocol" data-filter="nmap">nmap</div>	
+    <div class="tag protocol" data-filter="ssh">SSH</div>	
+    <div class="tag protocol" data-filter="radius">RADIUS</div>
+    <div class="tag protocol" data-filter="ospf">Dijkstra's Algorithm (OSPF)</div>
+    <div class="tag protocol" data-filter="rip">Bellman Ford Algorithm (RIP,IGP)</div>
+    <div class="tag network-vendor" data-filter="all">All</div>
 </div>
+
 
 <div class="row">
     <div class="lab-block" data-tags="cisco ipv6">
@@ -242,7 +279,7 @@
         <a href="https://drive.google.com/file/d/1AAA8MVJZ5Tl3BQRcqJZ6hI4GjTebYVAd/view?usp=sharing" class="btn html-btn">View Documentation</a>
         <a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Verifying%20Cisco%20HDLC%20Encapsulation.pkt" class="btn github-btn">Download Packet Tracer File</a>
     	</div>
-	<div class="lab-block" data-tags="nmap network-security">
+	<div class="lab-block" data-tags="nmap">
         <h2 class="lab-name">Network Scanning and Security with Nmap</h2>
         <p class="lab-description">
 	The Nmap scan of scanme.nmap.org identified open ports including SSH (port 22) running an older OpenSSH version, an Nping Echo service on port 9929, and a hidden service on 		port 31337 behind TCP wrappers. Port 80 (HTTP) was filtered, and the system, operating on Linux kernel 5.X, showed an uptime of around 10.606 days.</p>
@@ -287,7 +324,7 @@
     	<p>Key Concepts: TCP, TCP Sockets, netstat, TCP Interactive Data Flow, TCP Bulk Data Flow</p>
     	<a href="https://github.com/ayushkale1909/ideal-eureka/blob/main/TCP.pdf" class="btn html-btn">View Documentation</a>
 	</div>
-	<div class="lab-block" data-tags="tcp ssh">
+	<div class="lab-block" data-tags="tcp arp">
     	<h2 class="lab-name"> Troubleshooting with ICMP</h2>
     	<p class="lab-description">Utlized ping and traceroute to troubleshoot different types of host and verify the connectivity. tcpdump with additional flags is used to identify the 	problems. </p>
 	<p>Key Concepts: Ping, traceroute, tcpdump, pcap</p>
@@ -319,9 +356,28 @@
 	<a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/RADIUS.pkt" class="btn github-btn">Download Packet 	Tracer File</a>
 
 	</div>
-	
+	<div class="lab-block" data-tags="ospf">
+    	<h2 class="lab-name"> Dijkstra's Algorithm </h2>
+    	<p class="lab-description"> Dijkstra's Algorithm's simulation using Python for arbitary number of nodes and assigned IP addresses. The cost of the links can be assigned according to the latency / jitter values in the network.</p>
+    	<p>Key Concepts: Dijkstra's Algorithm, OSPF, Shortest Path</p>
+    	<a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Shortest%20Path/dijkstras_algorithm.py" class="btn html-btn">View Code</a>
+	</div>
 </div>
-
+<div class="row">
+	<div class="lab-block" data-tags="rip">
+    	<h2 class="lab-name"> Bellman Ford Algorithm </h2>
+    	<p class="lab-description">Bellman Ford Algorithm's simulation using Python for arbitary number of nodes and assigned IP addresses. The cost of the links can be assigned according to the latency / jitter values in the network.</p>
+    	<p>Key Concepts: Bellman Ford Algorithm, RIP, Shortest Path, IGP</p>
+    	<a href="https://github.com/ayushkale1909/Packet-tracer-docs/blob/main/Shortest%20Path/bellman_ford_algorithm.py" class="btn html-btn">View Code</a>
+	</div>
+	
+	<div class="lab-block" data-tags="topo">
+    	<h2 class="lab-name">Different Network Topologies Evaluation </h2>
+    	<p class="lab-description">Simulation of Routing Algorithm for different Network Topologies, used to calculate the Optimal Paths, Routing Table for Each Node, Convergence Time and Routing Overhead. Visualization and Network Analysis on different Network Topologies with a variable number of nodes.</p>
+    	<p>Key Concepts: Network Resilience, Network Topologies, Convergence Time, Routing Overhead, Optimal Paths</p>
+    	<a href="https://github.com/ayushkale1909/NetworkEvaluation" class="btn html-btn">View Code</a>
+	</div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
